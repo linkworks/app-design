@@ -139,6 +139,69 @@
         border-right: 1px solid #999;
       }
       
+      #leftbar h2 {
+        text-transform: uppercase;
+        padding: 8px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #7D7D7D;
+        text-shadow: 0px 1px 0px #ffffff;
+        filter: dropshadow(color=#ffffff, offx=0, offy=1);
+      }
+      
+      #leftbar ul {
+        width: 100%;
+      }
+      
+      #leftbar ul li {        
+        margin: 0;
+        font-size: 11px;
+        padding-left: 15px;
+        font-weight: bold;
+        color: #475A66;
+        text-shadow: 0px 1px 0px #ffffff;
+        filter: dropshadow(color=#ffffff, offx=0, offy=1);
+        line-height: 27px;
+        
+        cursor: default;
+      }
+      
+      #leftbar ul li.selected {
+        line-height: 25px;
+        color: white;
+        border-top: 1px solid #325FB9;
+        border-bottom: 1px solid #325FB9;
+        background: #5FACD1; /* old browsers */
+        background: -moz-linear-gradient(top, #5FACD1 0%, #3182D0 100%); /* firefox */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5FACD1), color-stop(100%,#3182D0)); /* webkit */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5FACD1', endColorstr='#3182D0',GradientType=0 ); /* ie */
+        text-shadow: 0px 1px 0px #000;
+        filter: dropshadow(color=#000, offx=0, offy=1);
+      }
+      
+      #leftbar ul li span.count {
+        font-family: Arial;
+        float: right;
+        font-size: 11px;
+        font-weight: bold;
+        padding: 2px 8px;
+        margin-right: 8px;
+        background: #98A8CA;
+        color: white;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        line-height: 12px;
+        margin-top: 5px;
+        
+        text-shadow: none;
+        filter: none;
+      }
+      
+      #leftbar ul li.selected span.count {
+        background: white;
+        color: #5FACD1;
+      }
+      
       #leftbar_bottom {
         position: fixed;
         height: 30px;
@@ -204,7 +267,12 @@
       </div>
       
       <div id="leftbar">
-        &nbsp;
+        <h2> Header </h2>
+        <ul>
+          <li> List Item <span class="count">234</span> </li>
+          <li> Second List Item </li>
+          <li class="selected"> Second List Item <span class="count">2</span> </li>
+        </ul>
         
         <div id="leftbar_bottom">
           <div class="resizer">||</div>
