@@ -9,8 +9,34 @@
     <script src="js/jquery.1.5.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/leftbar-resize.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery-ui-1.8.10.custom.min.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script type="text/javascript" charset="utf-8">
+      $(function(){
+        $('a[data-call]').live('click', function(){
+          eval($(this).data('call') + '()');
+        });
+      });
+      
+      function opendialog() {
+        $('#test-dialog').dialog({
+          title: 'Hola',
+          modal: true,
+          resizable: false,
+          draggable: false,
+          buttons: {
+            'OK': function() {
+              $(this).dialog("close");
+            }
+          }
+        });
+      }
+    </script>
   </head>
   <body>
+    <div id="test-dialog" style="display:none">
+      <p>Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum.</p>
+    </div>
+    
     <div id="container">
       <div id="toolbar">
         <ul>
@@ -18,6 +44,13 @@
             <a href="#">
               <span class"icon"><img src="icon.png" width="30" height="30" alt="Hat"></span> 
               <span class="label"> Lorem Ipsum </span>
+            </a>
+          </li>
+          
+          <li> 
+            <a href="#" data-call="opendialog">
+              <span class"icon"><img src="icon.png" width="30" height="30" alt="Hat"></span> 
+              <span class="label"> Open Dialog </span>
             </a>
           </li>
           
