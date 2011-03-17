@@ -9,6 +9,7 @@
     <script src="js/jquery.1.5.1.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/leftbar-resize.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery-ui-1.8.10.custom.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/leftbar-bottom.js" type="text/javascript" charset="utf-8"></script>
     
     <script type="text/javascript" charset="utf-8">
       $(function(){
@@ -30,14 +31,6 @@
           }
         });
       }
-      
-      $(function(){
-        $('#leftbar_bottom ul li').live('mousedown', function(){
-          $(this).addClass('active');
-        }).live('mouseup', function(){
-          $(this).removeClass('active');
-        });
-      });
     </script>
   </head>
   <body>
