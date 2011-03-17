@@ -30,6 +30,14 @@
           }
         });
       }
+      
+      $(function(){
+        $('#leftbar_bottom ul li').live('mousedown', function(){
+          $(this).addClass('active');
+        }).live('mouseup', function(){
+          $(this).removeClass('active');
+        });
+      });
     </script>
   </head>
   <body>
@@ -82,6 +90,16 @@
         
         <div id="leftbar_bottom">
           <div class="resizer">||</div>
+          
+          <ul>
+            <li class="plus">
+              <div>&nbsp;</div>
+            </li>
+            
+            <li class="minus">
+              <div>&nbsp;</div>
+            </li>
+          </ul>
         </div>
       </div>
       

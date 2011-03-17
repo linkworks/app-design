@@ -60,6 +60,7 @@ body {
 #toolbar ul li a:hover {
   color: #000;
   text-decoration: none;
+  cursor: default;
 }
 
 #toolbar ul li a:active {
@@ -168,7 +169,7 @@ body {
 
 #leftbar_bottom {
   position: fixed;
-  height: 30px;
+  height: 25px;
   bottom: 0px;
   z-index: 2000;
   width: 200px;
@@ -184,15 +185,43 @@ body {
 
 #leftbar_bottom .resizer {
   text-align: right; 
-  line-height: 30px; 
-  font-size: 12px; 
+  line-height: 25px; 
+  font-size: 10px; 
   letter-spacing: 1px; 
   padding-right: 3px; 
   color: #777;
   cursor: col-resize;
   width: 20px;
   float: right;
+  text-shadow: 1px 0px 0px #fff;
+  filter: dropshadow(color=#fff, offx=1, offy=0);
 }
+
+#leftbar_bottom ul {
+  margin-left: -3px;
+}
+
+#leftbar_bottom ul li {
+  float: left;
+  /*font-size: 20px;
+  font-weight: bold;*/
+  padding-left: 0;
+  height: 25px;
+  width: 30px;
+  border-right: 1px solid #999;
+}
+
+#leftbar_bottom ul li div { 
+  text-decoration: none;
+  
+  height: 25px;
+  width: 30px;
+}
+
+#leftbar_bottom ul li.active { background: #aaa;}
+
+#leftbar_bottom ul li.plus div { background: url('images/plus.png') no-repeat 10px 7px; }
+#leftbar_bottom ul li.minus div { background: url('images/minus.png') no-repeat 10px 7px; }
 
 /* Main */
 #main {
